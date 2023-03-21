@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!--Navigation-->
+        <div class="hero container-fluid m-0 p-0">
+            <div class="top-menu container-fluid m-0 p-0">
+                <nav class="navbar navbar-expand-lg navbar-light p-0 position-relative align-items-center">
+                    <div class="container">
+                        <!-- Branding Logo-->
+                        <a href="#" class="navbar-brand m-0 p-0 me-4 p-2"><img src="assets/img/logo-black.png" alt=""
+                                width="80px" class="img-fluid"></a>
+                        <!-- Close Navbar-toggle -->
+                        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarLight" aria-controls="navbarLight" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+
+                        <!-- Menu Navigation-->
+                        <div class="collapse navbar-collapse" id="navbarLight">
+                            <ul class="navbar-nav me-auto align-items-center">
+                                <li class="nav-item">
+                                    <a href="index.html" class="nav-link active"><i class="fas fa-house"></i>
+                                        Home</a>
+                                </li>
+
+                                <!--Dropdown Menu-->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Dropdown link
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="product.html" class="nav-link"><i class="bi bi-telephone-fill"></i>
+                                        Contact</a>
+                                </li>
+                            </ul>
+
+                            <!--Search input-->
+                            <input type="search" class="form-control form-control-sm rounded-pill"
+                                placeholder="Search product">
+
+                            <div class="navbar-btn align-items-center">
+                                <!--Login and Signup-->
+                                <a href="login.html" class="btn">
+                                    <i class="fa-solid fa-user link-hover-hotpink"></i>
+                                </a>
+
+
+                                <!--Search button icon-->
+                                <a href=" #" class="btn">
+                                    <i class="fa-solid fa-heart link-hover-hotpink"></i>
+                                </a>
+
+
+
+                                <!--Cart Button-->
+                                <a href="login.html" class="btn">
+                                    <i class="fa-solid fa-bag-shopping link-hover-hotpink"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!--Main Content-->
+            <div class="main">
+                <div class="container">
+                    <div class="hero-container-md d-grid min-vh-100 my-5">
+                        <div class="row align-items-center justify-content-center">
+
+                            <div class="col-lg-4 col-md-6 col-xl-3">
+                                <!--Header Text-->
+                                <h1 class="fw-bolder">Quality <span class="important">clothing</span> at <span
+                                        class="important">affordable</span> prices <i class="bi-arrow-right"></i>
+                                </h1>
+                                <p>Our brand is all about making fashion accessible and affordable for everyone.</p>
+                                <button class="btn border-0 shop-now btn-hover-dark"><i
+                                        class="fa-solid fa-bag-shopping"></i>
+                                    Shop Now
+                                </button>
+
+                                <!--Social Links-->
+                                <div class="pt-3 social-links">
+                                    <ul class="navbar-nav flex-row text-center">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link link-hover-hotpink"><i
+                                                    class="fa-brands fa-facebook"></i></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link link-hover-hotpink"><i
+                                                    class="fa-brands fa-twitter"></i></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link link-hover-hotpink"><i
+                                                    class="fa-brands fa-instagram"></i></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link link-hover-hotpink"><i
+                                                    class="fa-brands fa-tiktok"></i>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link link-hover-hotpink"><i
+                                                    class="fa-brands fa-youtube"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Hero Slide -->
+                            <div class="col-lg-4 mb-5 col-md-6 col-xl-6">
+                                <div id="hero-slide" class="carousel slide carousel-fade">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="hero-image mx-auto">
+                                                <img src="assets/img/product/hero1.png" alt="" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="hero-image mx-auto">
+                                                <img src="assets/img/product/hero2.png" alt="" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="hero-image mx-auto">
+                                                <img src="assets/img/product/hero3.png" alt="" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#hero-slide"
+                                        data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Item Description Right -->
+                            <div class="col-lg-4 mb-5 col-md-10 col-xl-3">
+                                <div class="item-desc shadow btn-hover-dark">
+                                    <h3 class="fw-bolder">Fabric</h3>
+                                    <p>Comfort, durability, and overall appearance of the clothing</p>
+                                </div>
+                                <div class="item-desc shadow btn-hover-dark">
+                                    <h3 class="fw-bolder">Fit</h3>
+                                    <p>Good fit is essential for any piece of clothing</p>
+                                </div>
+                                <div class="item-desc shadow btn-hover-dark">
+                                    <h3 class="fw-bolder">Design</h3>
+                                    <p>The design of the clothing should be stylish, unique, and on-trend</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Promotion and sales carousel-->
+        <div id="promotionCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#promotionCarousel" data-bs-slide-to="0"
+                    class="active rounded-circle btn-indicator"></button>
+                <button type="button" data-bs-target="#promotionCarousel" data-bs-slide-to="1"
+                    class="rounded-circle btn-indicator"></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/img/icon/promotion1.png" alt="" class="d-block w-100 promotion-image">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/icon/promotion2.png" alt="" class="d-block w-100 promotion-image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Category -->
+        <div id="category" class="container-sm-fluid section text-center">
+            <div class="text-header p-5">Browse Categories <i></i></div>
+            <div id="slider" class="container-sm-fluid mb-5 pb-5 overflow-x-auto">
+                <div class="row m-0 p-0 justify-content-center">
+                    <div class="col-6 col-sm-3 col-md-2">
+                        <div class="grid-gallery">
+                            <a href="men.html" class="text-decoration-none text-center hover-effect">
+                                <img src="assets/img/product/men-tshirt1.jpg" alt="" class="rounded-top img-fluid">
+                                <div class="img-desc rounded-bottom text-nowrap text-truncate">Men Shirt</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-2">
+                        <div class="grid-gallery">
+                            <a href="women.html" class="text-decoration-none  text-center hover-effect">
+                                <img src="assets/img/product/women-shirt1.jpg" alt="" class="rounded-top img-fluid">
+                                <div class="img-desc rounded-bottom text-nowrap text-truncate">Wowen Shirt</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-2">
+                        <div class="grid-gallery">
+                            <a href="typography.html" class="text-decoration-none  text-center hover-effect">
+                                <img src="assets/img/product/men-tshirt4.jpg" alt="" class="rounded-top img-fluid">
+                                <div class="img-desc rounded-bottom text-nowrap text-truncate">Typoghraphy Tees</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-2">
+                        <div class="grid-gallery">
+                            <a href="graphic.html" class="text-decoration-none  text-center hover-effect">
+                                <img src="assets/img/product/men-tshirt5.jpg" alt="" class="rounded-top img-fluid">
+                                <div class="img-desc rounded-bottom text-nowrap text-truncate">Graphic Tees</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-2">
+                        <div class="grid-gallery">
+                            <a href="anime.html" class="text-decoration-none  text-center hover-effect">
+                                <img src="assets/img/product/women-shirt3.jpg" alt="" class="rounded-top img-fluid">
+                                <div class="img-desc rounded-bottom text-nowrap text-truncate">Anime Tees</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Most Popular -->
+        <div class="most-popular bg-dark container-fluid">
+            <div class="container-fluid justify-content-center text-center text-white py-5">
+                <div class="text-header mb-5">Featured Products</div>
+                <div class="featured d-grid">
+                    <div class="row flex-wrap">
+                        <div class="col-lg-2 col-md-4 col-6">
+                            <div class="image-gallery">
+                                <img src="assets/img/product/hero1.png" alt="" class="img-fluid rounded-3">
+                                <div class="p-4">
+                                    <h6>Metro White Tee</h6>
+                                    <p>PHP 399.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6">
+                            <div class="image-gallery">
+                                <img src="assets/img/product/hero2.png" alt="" class="img-fluid rounded-3">
+                                <div class="p-4">
+                                    <h6>Take It Easy On Yourself Tee</h6>
+                                    <p>PHP 399.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6">
+                            <div class="image-gallery">
+                                <img src="assets/img/product/hero3.png" alt="" class="img-fluid rounded-3">
+                                <div class="p-4">
+                                    <h6>Tree Frame Tee</h6>
+                                    <p>PHP 499.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6">
+                            <div class="image-gallery">
+                                <img src="assets/img/product/hero4.png" alt="" class="img-fluid rounded-3">
+                                <div class="p-4">
+                                    <h6>Sike Tee</h6>
+                                    <p>PHP 399.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6">
+                            <div class="image-gallery">
+                                <img src="assets/img/product/hero5.png" alt="" class="img-fluid rounded-3">
+                                <div class="p-4">
+                                    <h6>Gameover Tee</h6>
+                                    <p>PHP 399.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6">
+                            <div class="image-gallery">
+                                <img src="assets/img/product/hero7.png" alt="" class="img-fluid rounded-3">
+                                <div class="p-4">
+                                    <h6>Dessert Tee</h6>
+                                    <p>PHP 399.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <button class="btn btn-outline-light btn-hover-light rounded-0 px-4 py-2"> See all</button>
+            </div>
+        </div>
+
+        <!-- Card -->
+        <div class="container-fluid my-5">
+            <div class="card">
+                <div class="row g-0 align-items-center justify-content-sm-center">
+                    <div class="col-sm-12 col-md-5 col-lg-4">
+                        <div id="card-image"></div>
+                    </div>
+                    <div class="col-sm-12 col-md-7 col-lg-8">
+                        <div class="card-body mx-sm-5">
+                            <h2 class="card-title fw-bold text-uppercase">Minimalist</h2>
+                            <p class="card-text">Experience the simplicity and elegance of our minimalist design
+                                t-shirt. With a focus on clean lines and understated details, this t-shirt offers a
+                                timeless look that can be dressed up or down. Made from high-quality materials, our
+                                minimalist design t-shirt is both comfortable and durable.
+                            </p>
+                            <a class="btn btn-dark rounded-0 px-5 py-3 btn-hover-light" href="#">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div class="footer">
+            <div class="container-fluid text-white bg-dark">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 mt-5 d-flex flex-column">
+                            <div class="logo"><img src="assets/img/logo-white.png" alt="" width="200px"></div>
+                            <div class="socialmedia">
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-twitter"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                                <a href=""><i class="bi bi-tiktok"></i></a>
+                                <a href=""><i class="bi bi-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="d-inline-flex flex-column mt-5">
+                                <h5 class="text-uppercase fw-bold">Explore</h5>
+                                <ul class="footer-nav">
+                                    <li class="footer-item"><a href="#" class="footer-link">About Us</a></li>
+                                    <li class="footer-item"><a href="#" class="footer-link">FAQs</a></li>
+                                    <li class="footer-item"><a href="#" class="footer-link">Privacy Policy</a></li>
+                                    <li class="footer-item"><a href="#" class="footer-link">Terms and Conditions</a>
+                                    </li>
+                                    <li class="footer-item"><a href="#" class="footer-link">Refund policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="d-inline-flex flex-column mt-5">
+                                <h5 class="text-uppercase fw-bold">Connect</h5>
+                                <ul class="footer-nav">
+                                    <li class="footer-item"><a href="footer-link">Contact Us</a></li>
+                                </ul>
+                                <p class="mt-3">
+                                    Don Antonio Heights, Commonwealth,
+                                    <br>
+                                    Quezon City, 1126,
+                                    <br>
+                                    Philippines
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer text-center p-5">© 2023 Metro</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/fd5c9838ec.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
