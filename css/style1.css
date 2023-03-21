@@ -1,359 +1,360 @@
 html,
 body {
-    font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
 }
 
 .navbar-btn a {
-    font-size: 25px !important;
-    padding: 4px;
+  font-size: 25px !important;
+  padding: 4px;
 }
 
 .social-links a {
-    font-size: 40px;
-    margin: 2px 8px;
-    color: rgba(8, 7, 7, 0.973);
+  font-size: 40px;
+  margin: 2px 8px;
+  color: rgba(8, 7, 7, 0.973);
 }
 
 .carousel-control-next-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-arrow-right-circle-fill' viewBox='0 0 16 16'%3e%3cpath d='M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-arrow-right-circle-fill' viewBox='0 0 16 16'%3e%3cpath d='M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z'/%3e%3c/svg%3e");
 }
 
 .carousel-light {
-    filter: invert(100%);
+  filter: invert(100%);
 }
 
 .carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-arrow-left-circle-fill' viewBox='0 0 16 16'%3e%3cpath d='M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-arrow-left-circle-fill' viewBox='0 0 16 16'%3e%3cpath d='M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z'/%3e%3c/svg%3e");
 }
 
-
 #card-image {
-    background-image: url(../assets/img/product/men-tshirt3.jpg);
-    background-repeat: no-repeat;
-    background-position: 50%;
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    cursor: pointer;
-    transition: all 0.4s ease-in-out;
+  background-image: url(../assets/img/product/men-tshirt3.jpg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
 }
 
 #card-image:hover {
-    background-image: url(../assets/img/product/men-tshirt2.jpg);
+  background-image: url(../assets/img/product/men-tshirt2.jpg);
 }
 
 .btn-hover-hotpink {
-    transition: all 0.5s ease-in-out !important;
+  transition: all 0.5s ease-in-out !important;
 }
 
 .btn-hover-hotpink:hover {
-    transform: translateY(-4px);
-    background-color: hotpink !important;
-    color: white !important;
-    border-color: none;
+  transform: translateY(-4px);
+  background-color: hotpink !important;
+  color: white !important;
+  border-color: none;
 }
 
 .link-hover-hotpink {
-    transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .link-hover-hotpink:hover {
-    color: hotpink !important;
-    transform: translateY(-4px);
+  color: hotpink !important;
+  transform: translateY(-4px);
 }
 
 .btn-hover-dark {
-    transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .btn-hover-dark:hover {
-    transform: translateY(-4px);
-    background-color: black !important;
-    color: white !important;
+  transform: translateY(-4px);
+  background-color: black !important;
+  color: white !important;
 }
 
 .btn-hover-light {
-    transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .btn-hover-light:hover {
-    transform: translateY(-4px);
-    background-color: white !important;
-    color: black !important;
+  transform: translateY(-4px);
+  background-color: white !important;
+  color: black !important;
 }
 
 a.hover-effect,
-a.hover-effect>div,
+a.hover-effect > div,
 div.hover-effect {
-    box-shadow: inset 0 0 0 0 black;
-    color: black;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  box-shadow: inset 0 0 0 0 black;
+  color: black;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .hover-effect:hover,
 .hover-effect:hover,
-.hover-effect:hover>div {
-    color: white;
-    box-shadow: inset 400px 0 0 0 black;
+.hover-effect:hover > div {
+  color: white;
+  box-shadow: inset 400px 0 0 0 black;
 }
 
 nav.top-nav {
-    background: linear-gradient(to bottom, #00000048, #00000000);
-    z-index: 1000;
-    top: 0;
+  background: linear-gradient(to bottom, #00000048, #00000000);
+  z-index: 1000;
+  top: 0;
 }
 
 .nav-item {
-    position: relative;
-    justify-content: center;
+  position: relative;
+  justify-content: center;
 }
 
-li>a.active {
-    color: hotpink !important;
+li > a.active {
+  color: hotpink !important;
 }
 
 .hero-image {
-    cursor: pointer;
-    transition: all 0.4s ease;
-    max-width: 300px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  max-width: 300px;
 }
 
 .hero-image:hover {
-    max-width: 400px;
+  max-width: 400px;
 }
 
-
 .important {
-    color: hotpink;
+  color: hotpink;
 }
 
 .shop-now {
-    background-color: hotpink;
-    color: white;
+  background-color: hotpink;
+  color: white;
 }
 
 .item-desc {
-    border-radius: 20px;
-    padding: 12px 20px;
-    margin-bottom: 10px;
-    background-color: white;
-    cursor: pointer;
+  border-radius: 20px;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  background-color: white;
+  cursor: pointer;
 }
 
 .btn-indicator {
-    margin: 0;
-    padding: 0;
-    width: 12px !important;
-    height: 12px !important;
+  margin: 0;
+  padding: 0;
+  width: 12px !important;
+  height: 12px !important;
 }
 
 .item-desc:nth-child(even) {
-    background-color: hotpink;
-    color: white;
+  background-color: hotpink;
+  color: white;
 }
 
-input[type=search],
+input[type="search"],
 .search {
-    width: 100px !important;
-    transition: all 0.4s ease-in-out;
+  width: 100px !important;
+  transition: all 0.4s ease-in-out;
 }
 
-input[type=search]:focus,
+input[type="search"]:focus,
 .search:focus {
-    width: 25% !important;
-    
+  width: 25% !important;
 }
 
 .hero {
-    background-image: url(../assets/img/product/background.png);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url(../assets/img/product/background.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .text-header {
-    letter-spacing: 3px;
-    text-transform: uppercase;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .link {
-    position: relative;
-    display: inline;
+  position: relative;
+  display: inline;
 }
 
-.footer>div>div:first-child a {
-    font-size: 1.5em;
-    margin-right: 15px;
+.footer > div > div:first-child a {
+  font-size: 1.5em;
+  margin-right: 15px;
 }
 
-.footer>div>div a {
-    color: white;
-    text-decoration: none;
+.footer > div > div a {
+  color: white;
+  text-decoration: none;
 }
 
 .footer-item {
-    list-style: none;
-    font-size: 10px;
+  list-style: none;
+  font-size: 10px;
 }
 
 .footer-nav {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /*Hoverable Dropdown*/
 
 .dropdown {
-    position: static;
+  position: static;
 }
 
 .dropdown-menu {
-    display: block;
-    position: absolute !important;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
+  display: block;
+  position: absolute !important;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .dropdown:hover .dropdown-menu {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
-
 
 /*CSS style for product page*/
 .section-product .single-product .part1 {
-    width: 100%;
-    height: 440px;
-    position: relative !important;
+  width: 100%;
+  height: 440px;
+  position: relative !important;
 }
 
 .section-product .single-product .part1 nav {
-    position: absolute;
-    top: 430px;
-    bottom: 0;
-    left: 10px;
-    margin: 20px 12px;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
+  position: absolute;
+  top: 430px;
+  bottom: 0;
+  left: 10px;
+  margin: 20px 12px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .section-product .single-product:hover .part1 nav {
-    top: 350px;
-    opacity: 1;
+  top: 350px;
+  opacity: 1;
 }
 
 .section-product .single-product .part1 nav li {
-    text-align: center;
-    margin-right: 10px;
-    height: 40px;
-    width: 40px;
-    background-color: white !important;
+  text-align: center;
+  margin-right: 10px;
+  height: 40px;
+  width: 40px;
+  background-color: white !important;
 }
 
 .section-product .single-product .part1 nav a {
-    color: #333 !important;
+  color: #333 !important;
 }
 
 .section-product #product1 .product-image {
-    width: 100%;
-    height: 100%;
-    background: url(../assets/img/product/men-tshirt1.jpg) no-repeat center;
-    background-size: cover;
-    transition: all 0.5s ease;
+  width: 100%;
+  height: 100%;
+  background: url(../assets/img/product/men-tshirt1.jpg) no-repeat center;
+  background-size: cover;
+  transition: all 0.5s ease;
 }
 
 .section-product #product2 .product-image {
-    width: 100%;
-    height: 100%;
-    background: url(../assets/img/product/men-tshirt2.jpg) no-repeat center;
-    background-size: cover;
-    transition: all 0.5s ease;
+  width: 100%;
+  height: 100%;
+  background: url(../assets/img/product/men-tshirt2.jpg) no-repeat center;
+  background-size: cover;
+  transition: all 0.5s ease;
 }
 
 .section-product #product3 .product-image {
-    width: 100%;
-    height: 100%;
-    background: url(../assets/img/product/men-tshirt3.jpg) no-repeat center;
-    background-size: cover;
-    transition: all 0.5s ease;
+  width: 100%;
+  height: 100%;
+  background: url(../assets/img/product/men-tshirt3.jpg) no-repeat center;
+  background-size: cover;
+  transition: all 0.5s ease;
 }
 
 .section-product #product4 .product-image {
-    width: 100%;
-    height: 100%;
-    background: url(../assets/img/product/men-tshirt4.jpg) no-repeat center;
-    background-size: cover;
-    transition: all 0.5s ease;
+  width: 100%;
+  height: 100%;
+  background: url(../assets/img/product/men-tshirt4.jpg) no-repeat center;
+  background-size: cover;
+  transition: all 0.5s ease;
 }
 
 .section-product .single-product:hover .product-image {
-    transform: scale(1.5, 1.5);
+  transform: scale(1.5, 1.5);
 }
 
 .section-product .single-product .part1 .discount,
 .section-product .single-product .part1 .new {
-    position: absolute;
-    top: 15px;
-    color: #ffffff;
-    padding: 2px 8px;
-    text-transform: uppercase;
-    font-size: 0.85rem;
+  position: absolute;
+  top: 15px;
+  color: #ffffff;
+  padding: 2px 8px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
 }
 
 .section-product .single-product .part1 .discount {
-    background-color: #fe302f;
-    left: 20px;
+  background-color: #fe302f;
+  left: 20px;
 }
 
 .section-product .single-product .part1 .new {
-    background-color: #444444;
-    left: 0;
+  background-color: #444444;
+  left: 0;
 }
 
 .part2 .product-title {
-    font-size: 1rem;
-    text-transform: capitalize;
+  font-size: 1rem;
+  text-transform: capitalize;
 }
 
 .part2 h4 {
-    display: inline-block;
-    font-size: 1rem;
+  display: inline-block;
+  font-size: 1rem;
 }
 
 .part2 .product-old-price {
-    position: relative;
-    padding: 0 7px;
-    margin-right: 2px;
-    opacity: 0.6;
+  position: relative;
+  padding: 0 7px;
+  margin-right: 2px;
+  opacity: 0.6;
 }
 
 .part2 .product-old-price::after {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #444444;
-    transform: translateY(-50%);
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #444444;
+  transform: translateY(-50%);
 }
 
 @media (min-width: 320px) {
-    #card-image {
-        height: 50vh;
-    }
+  #card-image {
+    height: 50vh;
+  }
+  #slider {
+    overflow-x: auto;
+  }
 }
 
 @media (min-width: 768px) {
-    #card-image {
-        height: 70vh;
-    }
-
+  #card-image {
+    height: 70vh;
+  }
 }
 
 @media (min-width: 1024px) {
-    #card-image {
-        height: 100vh;
-    }
+  #card-image {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 1024px) {
 }
