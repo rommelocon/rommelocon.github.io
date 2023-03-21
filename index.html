@@ -21,7 +21,7 @@
         <!--Navigation-->
         <div class="hero container-fluid m-0 p-0">
             <div class="top-menu container-fluid m-0 p-0">
-                <nav class="navbar navbar-expand-lg navbar-light p-0 position-relative align-items-center">
+                <nav class="navbar navbar-expand-xl navbar-light p-0 position-relative align-items-center">
                     <div class="container">
                         <!-- Branding Logo-->
                         <a href="#" class="navbar-brand m-0 p-0 me-4 p-2"><img src="assets/img/logo-black.png" alt=""
@@ -35,22 +35,87 @@
 
                         <!-- Menu Navigation-->
                         <div class="collapse navbar-collapse" id="navbarLight">
-                            <ul class="navbar-nav me-auto align-items-center">
+                            <ul class="navbar-nav me-auto">
                                 <li class="nav-item">
                                     <a href="index.html" class="nav-link active"><i class="fas fa-house"></i>
                                         Home</a>
                                 </li>
 
+                                <li class="nav-item">
+                                    <a href="product.html" class="nav-link"><i class="fa-solid fa-shop"></i>
+                                        Shop</a>
+                                </li>
                                 <!--Dropdown Menu-->
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Dropdown link
+                                        aria-expanded="false"><i class="fa-solid fa-folder"></i>
+                                        Men
                                     </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <ul class="dropdown-menu vw-100 text-center p-5 start-0">
+                                        <li>
+                                            <div class="dropdown-item-text fs-2 text-uppercase fw-bold dropdown-effect">
+                                                Men's Collection
+                                            </div>
+                                        </li>
+                                        <li><a href="men.html" class="btn btn-outline-dark btn-sm">View All</a></li>
+                                        <li>
+                                            <div class="d-flex m-4">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <img src="assets/img/product/men-tshirt1.jpg" alt=""
+                                                            class="img-fluid">
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <img src="assets/img/product/men-tshirt2.jpg" alt=""
+                                                            class="img-fluid">
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <img src="assets/img/product/men-tshirt3.jpg" alt=""
+                                                            class="img-fluid">
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <img src="assets/img/product/men-tshirt4.jpg" alt=""
+                                                            class="img-fluid">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false"><i class="fa-solid fa-folder"></i>
+                                        Women's
+                                    </a>
+                                    <ul class="dropdown-menu vw-100 text-center p-5 start-0">
+                                        <li>
+                                            <div class="dropdown-item-text fs-2 text-uppercase fw-bold">Women's
+                                                Collection
+                                            </div>
+                                        </li>
+                                        <li><a href="women.html" class="btn btn-outline-dark btn-sm">View All</a></li>
+                                        <li>
+                                            <div class="d-flex m-4">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <img src="assets/img/product/women-shirt1.jpg" alt=""
+                                                            class="img-fluid">
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <img src="assets/img/product/women-shirt2.jpg" alt=""
+                                                            class="img-fluid">
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <img src="assets/img/product/women-shirt3.jpg" alt=""
+                                                            class="img-fluid">
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <img src="assets/img/product/women-shirt4.jpg" alt=""
+                                                            class="img-fluid">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </li>
 
@@ -59,12 +124,13 @@
                                         Contact</a>
                                 </li>
                             </ul>
-
                             <!--Search input-->
                             <input type="search" class="form-control form-control-sm rounded-pill"
                                 placeholder="Search product">
 
+
                             <div class="navbar-btn align-items-center">
+
                                 <!--Login and Signup-->
                                 <a href="login.html" class="btn">
                                     <i class="fa-solid fa-user link-hover-hotpink"></i>
@@ -100,10 +166,10 @@
                                         class="important">affordable</span> prices <i class="bi-arrow-right"></i>
                                 </h1>
                                 <p>Our brand is all about making fashion accessible and affordable for everyone.</p>
-                                <button class="btn border-0 shop-now btn-hover-dark"><i
+                                <a href="product.html" class="btn border-0 shop-now btn-hover-dark" role="button"><i
                                         class="fa-solid fa-bag-shopping"></i>
                                     Shop Now
-                                </button>
+                                </a>
 
                                 <!--Social Links-->
                                 <div class="pt-3 social-links">
@@ -262,142 +328,243 @@
         <div class="most-popular bg-dark container-fluid">
             <div class="container-fluid justify-content-center text-center text-white py-5">
                 <div class="text-header mb-5">Featured Products</div>
-                <div class="featured d-grid">
-                    <div class="row flex-wrap">
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="image-gallery">
-                                <img src="assets/img/product/hero1.png" alt="" class="img-fluid rounded-3">
-                                <div class="p-4">
-                                    <h6>Metro White Tee</h6>
-                                    <p>PHP 399.00</p>
+                <div class="d-flex justify-content-center">
+                    <div id="featured-slide" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#featured-slide" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#featured-slide" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#featured-slide" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="mb-5 carousel-item active">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 col-sm-6 col-md-4">
+                                        <img src="assets/img/product/hero1.png" alt="" class="img-fluid">
+                                        <div class="part2">
+                                            <h3 class="product-title text-truncate">Metro White Tee</h3>
+                                            <h4 class="product-price">PHP 399</h4>
+                                            <div class="d-flex text-warning justify-content-center">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4">
+                                        <img src="assets/img/product/hero2.png" alt="" class="img-fluid">
+                                        <div class="part2">
+                                            <h3 class="product-title text-truncate">take it easy on yourself tee</h3>
+                                            <h4 class="product-price">PHP 399</h4>
+                                            <div class="d-flex text-warning justify-content-center">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4">
+                                        <img src="assets/img/product/hero3.png" alt="" class="img-fluid">
+                                        <div class="part2">
+                                            <h3 class="product-title text-truncate">graphic tee</h3>
+                                            <h4 class="product-price">PHP 399</h4>
+                                            <div class="d-flex text-warning justify-content-center">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-5 carousel-item">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 col-sm-6 col-md-4">
+                                        <img src="assets/img/product/hero4.png" alt="" class="img-fluid">
+                                        <div class="part2">
+                                            <h3 class="product-title text-truncate">sike tee</h3>
+                                            <h4 class="product-price">PHP 399</h4>
+                                            <div class="d-flex text-warning justify-content-center">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4">
+                                        <img src="assets/img/product/hero5.png" alt="" class="img-fluid">
+                                        <div class="part2">
+                                            <h3 class="product-title text-truncate">gameover tee</h3>
+                                            <h4 class="product-price">PHP 399</h4>
+                                            <div class="d-flex text-warning justify-content-center">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4">
+                                        <img src="assets/img/product/hero6.png" alt="" class="img-fluid">
+                                        <div class="part2">
+                                            <h3 class="product-title text-truncate">pleasant tee</h3>
+                                            <h4 class="product-price">PHP 399</h4>
+                                            <div class="d-flex text-warning justify-content-center">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-5 carousel-item">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 col-sm-6 col-md-4">
+                                        <img src="assets/img/product/hero7.png" alt="" class="img-fluid">
+                                        <div class="part2">
+                                            <h3 class="product-title text-truncate">dessert tea</h3>
+                                            <h4 class="product-price">PHP 399</h4>
+                                            <div class="d-flex text-warning justify-content-center">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4">
+                                        <img src="assets/img/product/hero1.png" alt="" class="img-fluid">
+                                        <div class="part2">
+                                            <h3 class="product-title text-truncate">white tee</h3>
+                                            <h4 class="product-price">PHP 399</h4>
+                                            <div class="d-flex text-warning justify-content-center">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4">
+                                        <img src="assets/img/product/hero2.png" alt="" class="img-fluid">
+                                        <div class="part2">
+                                            <h3 class="product-title text-truncate">take it easy on yourself tee</h3>
+                                            <h4 class="product-price">PHP 399</h4>
+                                            <div class="d-flex text-warning justify-content-center">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="image-gallery">
-                                <img src="assets/img/product/hero2.png" alt="" class="img-fluid rounded-3">
-                                <div class="p-4">
-                                    <h6>Take It Easy On Yourself Tee</h6>
-                                    <p>PHP 399.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="image-gallery">
-                                <img src="assets/img/product/hero3.png" alt="" class="img-fluid rounded-3">
-                                <div class="p-4">
-                                    <h6>Tree Frame Tee</h6>
-                                    <p>PHP 499.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="image-gallery">
-                                <img src="assets/img/product/hero4.png" alt="" class="img-fluid rounded-3">
-                                <div class="p-4">
-                                    <h6>Sike Tee</h6>
-                                    <p>PHP 399.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="image-gallery">
-                                <img src="assets/img/product/hero5.png" alt="" class="img-fluid rounded-3">
-                                <div class="p-4">
-                                    <h6>Gameover Tee</h6>
-                                    <p>PHP 399.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="image-gallery">
-                                <img src="assets/img/product/hero7.png" alt="" class="img-fluid rounded-3">
-                                <div class="p-4">
-                                    <h6>Dessert Tee</h6>
-                                    <p>PHP 399.00</p>
-                                </div>
-                            </div>
-                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#featured-slide"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon carousel-light" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#featured-slide"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon carousel-light" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-
-
-
                 </div>
-                <button class="btn btn-outline-light btn-hover-light rounded-0 px-4 py-2"> See all</button>
             </div>
         </div>
+    </div>
 
-        <!-- Card -->
-        <div class="container-fluid my-5">
-            <div class="card">
-                <div class="row g-0 align-items-center justify-content-sm-center">
-                    <div class="col-sm-12 col-md-5 col-lg-4">
-                        <div id="card-image"></div>
+    <!-- Card -->
+    <div class="container-fluid my-5">
+        <div class="card">
+            <div class="row g-0 align-items-center justify-content-sm-center">
+                <div class="col-sm-12 col-md-5 col-lg-4">
+                    <div id="card-image"></div>
+                </div>
+                <div class="col-sm-12 col-md-7 col-lg-8">
+                    <div class="card-body mx-sm-5">
+                        <h2 class="card-title fw-bold text-uppercase">Minimalist</h2>
+                        <p class="card-text">Experience the simplicity and elegance of our minimalist design
+                            t-shirt. With a focus on clean lines and understated details, this t-shirt offers a
+                            timeless look that can be dressed up or down. Made from high-quality materials, our
+                            minimalist design t-shirt is both comfortable and durable.
+                        </p>
+                        <a class="btn btn-dark rounded-0 px-5 py-3 btn-hover-light" href="product.html">Shop Now</a>
                     </div>
-                    <div class="col-sm-12 col-md-7 col-lg-8">
-                        <div class="card-body mx-sm-5">
-                            <h2 class="card-title fw-bold text-uppercase">Minimalist</h2>
-                            <p class="card-text">Experience the simplicity and elegance of our minimalist design
-                                t-shirt. With a focus on clean lines and understated details, this t-shirt offers a
-                                timeless look that can be dressed up or down. Made from high-quality materials, our
-                                minimalist design t-shirt is both comfortable and durable.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="footer">
+        <div class="container-fluid text-white bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 mt-5 d-flex flex-column">
+                        <div class="logo"><img src="assets/img/logo-white.png" alt="" width="200px"></div>
+                        <div class="socialmedia">
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-tiktok"></i></a>
+                            <a href=""><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="d-inline-flex flex-column mt-5">
+                            <h5 class="text-uppercase fw-bold">Explore</h5>
+                            <ul class="footer-nav">
+                                <li class="footer-item"><a href="#" class="footer-link">About Us</a></li>
+                                <li class="footer-item"><a href="#" class="footer-link">FAQs</a></li>
+                                <li class="footer-item"><a href="#" class="footer-link">Privacy Policy</a></li>
+                                <li class="footer-item"><a href="#" class="footer-link">Terms and Conditions</a>
+                                </li>
+                                <li class="footer-item"><a href="#" class="footer-link">Refund policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="d-inline-flex flex-column mt-5">
+                            <h5 class="text-uppercase fw-bold">Connect</h5>
+                            <ul class="footer-nav">
+                                <li class="footer-item"><a href="footer-link">Contact Us</a></li>
+                            </ul>
+                            <p class="mt-3">
+                                Don Antonio Heights, Commonwealth,
+                                <br>
+                                Quezon City, 1126,
+                                <br>
+                                Philippines
                             </p>
-                            <a class="btn btn-dark rounded-0 px-5 py-3 btn-hover-light" href="#">Shop Now</a>
                         </div>
                     </div>
                 </div>
-
+                <div class="footer text-center p-5">© 2023 Metro</div>
             </div>
         </div>
-
-        <!--Footer-->
-        <div class="footer">
-            <div class="container-fluid text-white bg-dark">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4 mt-5 d-flex flex-column">
-                            <div class="logo"><img src="assets/img/logo-white.png" alt="" width="200px"></div>
-                            <div class="socialmedia">
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-tiktok"></i></a>
-                                <a href=""><i class="bi bi-youtube"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="d-inline-flex flex-column mt-5">
-                                <h5 class="text-uppercase fw-bold">Explore</h5>
-                                <ul class="footer-nav">
-                                    <li class="footer-item"><a href="#" class="footer-link">About Us</a></li>
-                                    <li class="footer-item"><a href="#" class="footer-link">FAQs</a></li>
-                                    <li class="footer-item"><a href="#" class="footer-link">Privacy Policy</a></li>
-                                    <li class="footer-item"><a href="#" class="footer-link">Terms and Conditions</a>
-                                    </li>
-                                    <li class="footer-item"><a href="#" class="footer-link">Refund policy</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="d-inline-flex flex-column mt-5">
-                                <h5 class="text-uppercase fw-bold">Connect</h5>
-                                <ul class="footer-nav">
-                                    <li class="footer-item"><a href="footer-link">Contact Us</a></li>
-                                </ul>
-                                <p class="mt-3">
-                                    Don Antonio Heights, Commonwealth,
-                                    <br>
-                                    Quezon City, 1126,
-                                    <br>
-                                    Philippines
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer text-center p-5">© 2023 Metro</div>
-                </div>
-            </div>
-        </div>
+    </div>
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
