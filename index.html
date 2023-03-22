@@ -14,26 +14,31 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/fd5c9838ec.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="page-wrapper">
         <!--Navigation-->
         <div class="hero container-fluid m-0 p-0">
             <div class="top-menu container-fluid m-0 p-0">
-                <nav class="navbar navbar-expand-xl navbar-light position-relative align-items-center">
+                <nav
+                    class="navbar navbar-expand-xl navbar-light position-relative align-items-center navbar-dark bg-dark">
                     <div class="container">
                         <!-- Branding Logo-->
-                        <a href="#" class="navbar-brand m-0 p-0 me-4 p-2"><img src="assets/img/logo-black.png" alt=""
+                        <a href="#" class="navbar-brand m-0 p-0 me-4 p-2"><img src="assets/img/logo-white.png" alt=""
                                 width="80px" class="img-fluid"></a>
                         <!-- Close Navbar-toggle -->
                         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarLight" aria-controls="navbarLight" aria-expanded="false"
+                            data-bs-target="#navbarDark" aria-controls="navbarDark" aria-expanded="false"
                             aria-label="Toggle navigation">
                             <i class="fa-solid fa-bars"></i>
                         </button>
 
                         <!-- Menu Navigation-->
-                        <div class="collapse navbar-collapse" id="navbarLight">
+                        <div class="collapse navbar-collapse" id="navbarDark">
                             <ul class="navbar-nav me-auto">
                                 <li class="nav-item">
                                     <a href="index.html" class="nav-link active"><i class="fas fa-house"></i>
@@ -123,12 +128,34 @@
                                         Contact</a>
                                 </li>
                             </ul>
-                            <!--Search input-->
-                            <input type="search" class="form-control form-control-sm rounded-pill"
-                                placeholder="Search product">
-
+                            <div class="d-flex">
+                                <!--Dropdown offcanvas when search button click-->
+                                <div class="offcanvas offcanvas-top bg-dark text-white text-center" tabindex="-1"
+                                    id="offcanvasSearch" aria-labelledby="offcanvasSearchLabel">
+                                    <div class="offcanvas-header">
+                                        <h5 class="offcanvas-title"></h5>
+                                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                        <form class="container input-group-lg input-group d-flex">
+                                            <span class="input-group-text" id="basic-addon1">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                            </span>
+                                            <input type="search" class="form-control form-control-lg"
+                                                placeholder="Search our store" aria-label="Search"
+                                                aria-describedby="basic-addon1">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="navbar-btn align-items-center">
+                                <!--Search button icon-->
+                                <a class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch"
+                                    aria-controls="offcanvasSearch">
+                                    <i class="fa-solid fa-magnifying-glass link-hover-hotpink"></i>
+                                </a>
 
                                 <!--Login and Signup-->
                                 <a href="login.html" class="btn">
@@ -136,7 +163,7 @@
                                 </a>
 
 
-                                <!--Search button icon-->
+                                <!--Wishlist button icon-->
                                 <a href=" #" class="btn">
                                     <i class="fa-solid fa-heart link-hover-hotpink"></i>
                                 </a>
@@ -144,8 +171,8 @@
 
 
                                 <!--Cart Button-->
-                                <a href="login.html" class="btn">
-                                    <i class="fa-solid fa-bag-shopping link-hover-hotpink"></i>
+                                <a href="#" class="btn" data-bs-toggle="offcanvas" data-bs-target="#addToCartOffcanvas">
+                                    <i class="fa-solid fa-shopping-cart link-hover-hotpink"></i>
                                 </a>
                             </div>
                         </div>
@@ -253,7 +280,7 @@
         </div>
 
         <!--Promotion and sales carousel-->
-        <div id="promotionCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div id="promotionCarousel" class="carousel slide carousel-fade d-md-block d-none" data-bs-ride="carousel">
 
             <!-- Indicators/dots -->
             <div class="carousel-indicators">
@@ -266,10 +293,53 @@
             <!-- The slideshow/carousel -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/img/icon/promotion1.png" alt="" class="d-block w-100 promotion-image">
+                    <img src="assets/img/icon/promotion1.png" alt="" class="d-block w-100">
+                    <div class="carousel-caption h-100">
+                        <div class="row align-items-center h-100 mx-4">
+                            <div class="col-6">
+                                <h3 class="carousel-title fs-1">Free Shipping</h3>
+                            </div>
+                            <div class="col-6">
+                                <p class="carousel-text fs-3">Order now and enjoy free shipping on all orders over
+                                    ₱2000.
+                                    Don't miss out!</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/img/icon/promotion2.png" alt="" class="d-block w-100 promotion-image">
+                    <img src="assets/img/icon/promotion2.png" alt="" class="d-block w-100">
+                    <div class="carousel-caption h-100">
+                        <div class="row align-items-center h-100 mx-4 justify-content-center">
+                            <div class="col-xl-5 col-lg-12">
+                                <div class="position-relative banner">
+                                    <img src="assets/img/icon/sale.png" alt="" class="img-fluid position-absolute sale"
+                                        width="80px">
+                                    <h3
+                                        class="carousel-text bg-light text-dark py-4 px-5 rounded-3 text-center fst-italic">
+                                        <span class="fw-bold important">Summer sale launch!</span>
+                                        Discover the latest trends and get <span class="fw-bold important">10%</span>
+                                        off on
+                                        all new arrivals. <span class="fw-bold important">Shop now!</span>
+                                    </h3>
+                                </div>
+
+                            </div>
+                            <div class="col-6 d-xl-block d-none">
+                                <div class="d-flex justify-content-center">
+                                    <div class="double-image">
+                                        <div class="double-image-wrapper">
+                                            <img src="assets/img/product/mockup1.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="double-image-wrapper">
+                                            <img src="assets/img/product/mockup2.jpg" alt="" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -728,8 +798,19 @@
     </div>
     </div>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/fd5c9838ec.js" crossorigin="anonymous"></script>
+    <div class="offcanvas offcanvas-end" id="addToCartOffcanvas">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images,
+                lists, etc.
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

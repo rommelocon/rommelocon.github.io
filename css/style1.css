@@ -3,9 +3,86 @@ body {
   font-family: "Montserrat", Arial, sans-serif;
 }
 
+.double-image {
+  position: relative;
+  min-height: 440px;
+  width: auto;
+}
+
+.double-image div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 2;
+  cursor: pointer;
+}
+.double-image div:first-child {
+  width: 300px;
+}
+.double-image div:last-child {
+  width: 500px;
+  top: 48px;
+  left: -400px;
+  z-index: 1;
+}
+.banner, .double-image div {
+  box-shadow: -10px 10px 20px 5px rgba(0, 0, 0, 0.308);
+}
+
+@media (max-width: 1440px) {
+  .double-image div:first-child {
+    width: 270px;
+    top: 17px;
+  }
+  .double-image div:last-child {
+    width: 400px;
+    top: 80px;
+    left: -300px;
+    z-index: 1;
+  }
+}
+@media (max-width: 1024px) {
+  .double-image div:first-child {
+    width: 188px;
+    top: 17px;
+  }
+  .double-image div:last-child {
+    width: 267px;
+    top: 80px;
+    left: -220px;
+    z-index: 1;
+  }
+  .banner {
+    top: 11px;
+  }
+}
+
+.sale {
+  left: -10px;
+  top: -7px;
+}
+
+.carousel-caption {
+  left: 0;
+  right: 0;
+}
+
+.carousel-text {
+  text-align: left;
+  font-weight: 400;
+}
+
+.carousel-title {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
 .navbar-btn a {
   font-size: 25px !important;
   padding: 4px;
+  color: #ffffff;
 }
 
 .social-links a {
@@ -94,21 +171,6 @@ div.hover-effect {
 .hover-effect:hover > div {
   color: white;
   box-shadow: inset 400px 0 0 0 black;
-}
-
-nav.top-nav {
-  background: linear-gradient(to bottom, #00000048, #00000000);
-  z-index: 1000;
-  top: 0;
-}
-
-.nav-item {
-  position: relative;
-  justify-content: center;
-}
-
-li > a.active {
-  color: hotpink !important;
 }
 
 .hero-image {
@@ -204,17 +266,8 @@ input[type="search"]:focus,
   position: static;
 }
 
-.dropdown-menu {
-  display: block;
-  position: absolute !important;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-.dropdown:hover .dropdown-menu {
-  visibility: visible;
-  opacity: 1;
+#offcanvasSearch .btn-close {
+  filter: invert(100%);
 }
 
 /*CSS style for product page*/
@@ -387,5 +440,8 @@ input[type="search"]:focus,
   input[type="search"]:focus,
   .search:focus {
     width: 100% !important;
+  }
+  .double-image {
+    display: none;
   }
 }

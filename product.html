@@ -21,20 +21,21 @@
         <!--Navigation-->
         <div class="container-fluid m-0 p-0">
             <div class="top-menu container-fluid m-0 p-0">
-                <nav class="navbar navbar-expand-xl navbar-light p-0 position-relative align-items-center">
+                <nav
+                    class="navbar navbar-expand-xl navbar-light position-relative align-items-center navbar-dark bg-dark">
                     <div class="container">
                         <!-- Branding Logo-->
-                        <a href="#" class="navbar-brand m-0 p-0 me-4 p-2"><img src="assets/img/logo-black.png" alt=""
+                        <a href="#" class="navbar-brand m-0 p-0 me-4 p-2"><img src="assets/img/logo-white.png" alt=""
                                 width="80px" class="img-fluid"></a>
                         <!-- Close Navbar-toggle -->
                         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarLight" aria-controls="navbarLight" aria-expanded="false"
+                            data-bs-target="#navbarDark" aria-controls="navbarDark" aria-expanded="false"
                             aria-label="Toggle navigation">
                             <i class="fa-solid fa-bars"></i>
                         </button>
 
                         <!-- Menu Navigation-->
-                        <div class="collapse navbar-collapse" id="navbarLight">
+                        <div class="collapse navbar-collapse" id="navbarDark">
                             <ul class="navbar-nav me-auto">
                                 <li class="nav-item">
                                     <a href="index.html" class="nav-link"><i class="fas fa-house"></i>
@@ -44,6 +45,7 @@
                                     <a href="product.html" class="nav-link active"><i class="fa-solid fa-shop"></i>
                                         Shop</a>
                                 </li>
+
                                 <!--Dropdown Menu-->
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -123,12 +125,34 @@
                                         Contact</a>
                                 </li>
                             </ul>
-                            <!--Search input-->
-                            <input type="search" class="form-control form-control-sm rounded-pill"
-                                placeholder="Search product">
-
+                            <div class="d-flex">
+                                <!--Dropdown offcanvas when search button click-->
+                                <div class="offcanvas offcanvas-top bg-dark text-white text-center" tabindex="-1"
+                                    id="offcanvasSearch" aria-labelledby="offcanvasSearchLabel">
+                                    <div class="offcanvas-header">
+                                        <h5 class="offcanvas-title"></h5>
+                                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                        <form class="container input-group-lg input-group d-flex">
+                                            <span class="input-group-text" id="basic-addon1">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                            </span>
+                                            <input type="search" class="form-control form-control-lg"
+                                                placeholder="Search our store" aria-label="Search"
+                                                aria-describedby="basic-addon1">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="navbar-btn align-items-center">
+                                <!--Search button icon-->
+                                <a class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch"
+                                    aria-controls="offcanvasSearch">
+                                    <i class="fa-solid fa-magnifying-glass link-hover-hotpink"></i>
+                                </a>
 
                                 <!--Login and Signup-->
                                 <a href="login.html" class="btn">
@@ -344,16 +368,20 @@
                                                     <span class="discount">15% off</span>
                                                     <nav class="navbar navbar-expand-sm">
                                                         <ul class="navbar-nav flex-row">
-                                                            <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                        class="fas fa-shopping-cart"></i></a></li>
-                                                            <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                        class="fas fa-heart"></i></a>
+                                                            <li class="nav-item"><i class="fas fa-shopping-cart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToCart"></i></li>
+                                                            <li class="nav-item"><i class="fas fa-heart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToFavorites"></i>
                                                             </li>
-                                                            <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                        class="fas fa-plus"></i></a>
+                                                            <li class="nav-item"><i class="fas fa-plus"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToWishlist"></i>
                                                             </li>
-                                                            <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                        class="fas fa-expand"></i></a>
+                                                            <li class="nav-item"><i class="fas fa-expand"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#expand2"></i>
                                                             </li>
                                                         </ul>
                                                     </nav>
@@ -371,16 +399,20 @@
                                                     <div class="product-image"></div>
                                                     <nav class="navbar navbar-expand-sm">
                                                         <ul class="navbar-nav flex-row">
-                                                            <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                        class="fas fa-shopping-cart"></i></a></li>
-                                                            <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                        class="fas fa-heart"></i></a>
+                                                            <li class="nav-item"><i class="fas fa-shopping-cart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToCart"></i></li>
+                                                            <li class="nav-item"><i class="fas fa-heart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToFavorites"></i>
                                                             </li>
-                                                            <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                        class="fas fa-plus"></i></a>
+                                                            <li class="nav-item"><i class="fas fa-plus"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToWishlist"></i>
                                                             </li>
-                                                            <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                        class="fas fa-expand"></i></a>
+                                                            <li class="nav-item"><i class="fas fa-expand"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#expand3"></i>
                                                             </li>
                                                         </ul>
                                                     </nav>
@@ -400,16 +432,20 @@
                                                     <span class="new">new</span>
                                                     <nav class="navbar navbar-expand-sm">
                                                         <ul class="navbar-nav flex-row">
-                                                            <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                        class="fas fa-shopping-cart"></i></a></li>
-                                                            <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                        class="fas fa-heart"></i></a>
+                                                            <li class="nav-item"><i class="fas fa-shopping-cart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToCart"></i></li>
+                                                            <li class="nav-item"><i class="fas fa-heart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToFavorites"></i>
                                                             </li>
-                                                            <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                        class="fas fa-plus"></i></a>
+                                                            <li class="nav-item"><i class="fas fa-plus"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToWishlist"></i>
                                                             </li>
-                                                            <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                        class="fas fa-expand"></i></a>
+                                                            <li class="nav-item"><i class="fas fa-expand"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#expand4"></i>
                                                             </li>
                                                         </ul>
                                                     </nav>
@@ -420,238 +456,391 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                                <div id="product1" class="single-product">
-                                                    <div class="part1 position-relative mb-1">
-                                                        <div class="product-image"></div>
-                                                        <nav class="navbar navbar-expand-sm">
-                                                            <ul class="navbar-nav flex-row">
-                                                                <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                            class="fas fa-shopping-cart"></i></a></li>
-                                                                <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                            class="fas fa-heart"></i></a>
-                                                                </li>
-                                                                <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                            class="fas fa-plus"></i></a>
-                                                                </li>
-                                                                <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                            class="fas fa-expand"></i></a>
-                                                                </li>
-                                                            </ul>
-                                                        </nav>
-                                                    </div>
-                                                    <div class="part2">
-                                                        <h3 class="product-title">Here Product Title</h3>
-                                                        <h4 class="product-old-price">PHP 599</h4>
-                                                        <h4 class="product-price">PHP 399</h4>
-                                                    </div>
+                                        <!-- Single Product -->
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div id="product1" class="single-product">
+                                                <div class="part1 position-relative mb-1">
+                                                    <div class="product-image"></div>
+                                                    <nav class="navbar navbar-expand-sm">
+                                                        <ul class="navbar-nav flex-row">
+                                                            <li class="nav-item"><i class="fas fa-shopping-cart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToCart"></i></li>
+                                                            <li class="nav-item"><i class="fas fa-heart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToFavorites"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-plus"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToWishlist"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-expand"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#expand1"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                                <div class="part2">
+                                                    <h3 class="product-title">Here Product Title</h3>
+                                                    <h4 class="product-old-price">PHP 599</h4>
+                                                    <h4 class="product-price">PHP 399</h4>
                                                 </div>
                                             </div>
-                                            <!-- Single Product -->
-                                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                                <div id="product2" class="single-product">
-                                                    <div class="part1 position-relative mb-1">
-                                                        <div class="product-image"></div>
-                                                        <span class="discount">15% off</span>
-                                                        <nav class="navbar navbar-expand-sm">
-                                                            <ul class="navbar-nav flex-row">
-                                                                <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                            class="fas fa-shopping-cart"></i></a></li>
-                                                                <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                            class="fas fa-heart"></i></a>
-                                                                </li>
-                                                                <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                            class="fas fa-plus"></i></a>
-                                                                </li>
-                                                                <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                            class="fas fa-expand"></i></a>
-                                                                </li>
-                                                            </ul>
-                                                        </nav>
-                                                    </div>
-                                                    <div class="part2">
-                                                        <h3 class="product-title">Here Product Title</h3>
-                                                        <h4 class="product-price">PHP 399</h4>
-                                                    </div>
+                                        </div>
+                                        <!-- Single Product -->
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div id="product2" class="single-product">
+                                                <div class="part1 position-relative mb-1">
+                                                    <div class="product-image"></div>
+                                                    <span class="discount">15% off</span>
+                                                    <nav class="navbar navbar-expand-sm">
+                                                        <ul class="navbar-nav flex-row">
+                                                            <li class="nav-item"><i class="fas fa-shopping-cart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToCart"></i></li>
+                                                            <li class="nav-item"><i class="fas fa-heart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToFavorites"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-plus"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToWishlist"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-expand"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#expand2"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                                <div class="part2">
+                                                    <h3 class="product-title">Here Product Title</h3>
+                                                    <h4 class="product-price">PHP 399</h4>
                                                 </div>
                                             </div>
-                                            <!-- Single Product -->
-                                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                                <div id="product3" class="single-product">
-                                                    <div class="part1 position-relative mb-1">
-                                                        <div class="product-image"></div>
-                                                        <nav class="navbar navbar-expand-sm">
-                                                            <ul class="navbar-nav flex-row">
-                                                                <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                            class="fas fa-shopping-cart"></i></a></li>
-                                                                <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                            class="fas fa-heart"></i></a>
-                                                                </li>
-                                                                <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                            class="fas fa-plus"></i></a>
-                                                                </li>
-                                                                <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                            class="fas fa-expand"></i></a>
-                                                                </li>
-                                                            </ul>
-                                                        </nav>
-                                                    </div>
-                                                    <div class="part2">
-                                                        <h3 class="product-title">Here Product Title</h3>
-                                                        <h4 class="product-old-price">PHP 599</h4>
-                                                        <h4 class="product-price">PHP 399</h4>
-                                                    </div>
+                                        </div>
+                                        <!-- Single Product -->
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div id="product3" class="single-product">
+                                                <div class="part1 position-relative mb-1">
+                                                    <div class="product-image"></div>
+                                                    <nav class="navbar navbar-expand-sm">
+                                                        <ul class="navbar-nav flex-row">
+                                                            <li class="nav-item"><i class="fas fa-shopping-cart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToCart"></i></li>
+                                                            <li class="nav-item"><i class="fas fa-heart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToFavorites"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-plus"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToWishlist"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-expand"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#expand3"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                                <div class="part2">
+                                                    <h3 class="product-title">Here Product Title</h3>
+                                                    <h4 class="product-old-price">PHP 599</h4>
+                                                    <h4 class="product-price">PHP 399</h4>
                                                 </div>
                                             </div>
-                                            <!-- Single Product -->
-                                            <div class="col-md-6 col-lg-4 col-xxl-3">
-                                                <div id="product4" class="single-product">
-                                                    <div class="part1 position-relative mb-1">
-                                                        <div class="product-image"></div>
-                                                        <span class="new">new</span>
-                                                        <nav class="navbar navbar-expand-sm">
-                                                            <ul class="navbar-nav flex-row">
-                                                                <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                            class="fas fa-shopping-cart"></i></a></li>
-                                                                <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                            class="fas fa-heart"></i></a>
-                                                                </li>
-                                                                <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                            class="fas fa-plus"></i></a>
-                                                                </li>
-                                                                <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                            class="fas fa-expand"></i></a>
-                                                                </li>
-                                                            </ul>
-                                                        </nav>
-                                                    </div>
-                                                    <div class="part2">
-                                                        <h3 class="product-title">Here Product Title</h3>
-                                                        <h4 class="product-price">PHP 399</h4>
-                                                    </div>
+                                        </div>
+                                        <!-- Single Product -->
+                                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                                            <div id="product4" class="single-product">
+                                                <div class="part1 position-relative mb-1">
+                                                    <div class="product-image"></div>
+                                                    <span class="new">new</span>
+                                                    <nav class="navbar navbar-expand-sm">
+                                                        <ul class="navbar-nav flex-row">
+                                                            <li class="nav-item"><i class="fas fa-shopping-cart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToCart"></i></li>
+                                                            <li class="nav-item"><i class="fas fa-heart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToFavorites"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-plus"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToWishlist"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-expand"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#expand4"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                                <div class="part2">
+                                                    <h3 class="product-title">Here Product Title</h3>
+                                                    <h4 class="product-price">PHP 399</h4>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                                    <div id="product1" class="single-product">
-                                                        <div class="part1 position-relative mb-1">
-                                                            <div class="product-image"></div>
-                                                            <nav class="navbar navbar-expand-sm">
-                                                                <ul class="navbar-nav flex-row">
-                                                                    <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                                class="fas fa-shopping-cart"></i></a>
-                                                                    </li>
-                                                                    <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                                class="fas fa-heart"></i></a>
-                                                                    </li>
-                                                                    <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                                class="fas fa-plus"></i></a>
-                                                                    </li>
-                                                                    <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                                class="fas fa-expand"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </nav>
-                                                        </div>
-                                                        <div class="part2">
-                                                            <h3 class="product-title">Here Product Title</h3>
-                                                            <h4 class="product-old-price">PHP 599</h4>
-                                                            <h4 class="product-price">PHP 399</h4>
-                                                        </div>
-                                                    </div>
+                                        </div>
+                                        <!-- Single Product -->
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div id="product1" class="single-product">
+                                                <div class="part1 position-relative mb-1">
+                                                    <div class="product-image"></div>
+                                                    <nav class="navbar navbar-expand-sm">
+                                                        <ul class="navbar-nav flex-row">
+                                                            <li class="nav-item"><i class="fas fa-shopping-cart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToCart"></i></li>
+                                                            <li class="nav-item"><i class="fas fa-heart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToFavorites"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-plus"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToWishlist"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-expand"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#expand1"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
                                                 </div>
-                                                <!-- Single Product -->
-                                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                                    <div id="product2" class="single-product">
-                                                        <div class="part1 position-relative mb-1">
-                                                            <div class="product-image"></div>
-                                                            <span class="discount">15% off</span>
-                                                            <nav class="navbar navbar-expand-sm">
-                                                                <ul class="navbar-nav flex-row">
-                                                                    <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                                class="fas fa-shopping-cart"></i></a>
-                                                                    </li>
-                                                                    <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                                class="fas fa-heart"></i></a>
-                                                                    </li>
-                                                                    <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                                class="fas fa-plus"></i></a>
-                                                                    </li>
-                                                                    <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                                class="fas fa-expand"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </nav>
-                                                        </div>
-                                                        <div class="part2">
-                                                            <h3 class="product-title">Here Product Title</h3>
-                                                            <h4 class="product-price">PHP 399</h4>
-                                                        </div>
-                                                    </div>
+                                                <div class="part2">
+                                                    <h3 class="product-title">Here Product Title</h3>
+                                                    <h4 class="product-old-price">PHP 599</h4>
+                                                    <h4 class="product-price">PHP 399</h4>
                                                 </div>
-                                                <!-- Single Product -->
-                                                <div class="col-md-6 col-lg-4 col-xl-3">
-                                                    <div id="product3" class="single-product">
-                                                        <div class="part1 position-relative mb-1">
-                                                            <div class="product-image"></div>
-                                                            <nav class="navbar navbar-expand-sm">
-                                                                <ul class="navbar-nav flex-row">
-                                                                    <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                                class="fas fa-shopping-cart"></i></a>
-                                                                    </li>
-                                                                    <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                                class="fas fa-heart"></i></a>
-                                                                    </li>
-                                                                    <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                                class="fas fa-plus"></i></a>
-                                                                    </li>
-                                                                    <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                                class="fas fa-expand"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </nav>
-                                                        </div>
-                                                        <div class="part2">
-                                                            <h3 class="product-title">Here Product Title</h3>
-                                                            <h4 class="product-old-price">PHP 599</h4>
-                                                            <h4 class="product-price">PHP 399</h4>
-                                                        </div>
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <!-- Single Product -->
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div id="product2" class="single-product">
+                                                <div class="part1 position-relative mb-1">
+                                                    <div class="product-image"></div>
+                                                    <span class="discount">15% off</span>
+                                                    <nav class="navbar navbar-expand-sm">
+                                                        <ul class="navbar-nav flex-row">
+                                                            <li class="nav-item"><i class="fas fa-shopping-cart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToCart"></i></li>
+                                                            <li class="nav-item"><i class="fas fa-heart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToFavorites"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-plus"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToWishlist"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-expand"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#expand2"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
                                                 </div>
-                                                <!-- Single Product -->
-                                                <div class="col-md-6 col-lg-4 col-xxl-3">
-                                                    <div id="product4" class="single-product">
-                                                        <div class="part1 position-relative mb-1">
-                                                            <div class="product-image"></div>
-                                                            <span class="new">new</span>
-                                                            <nav class="navbar navbar-expand-sm">
-                                                                <ul class="navbar-nav flex-row">
-                                                                    <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                                class="fas fa-shopping-cart"></i></a>
-                                                                    </li>
-                                                                    <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                                class="fas fa-heart"></i></a>
-                                                                    </li>
-                                                                    <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                                class="fas fa-plus"></i></a>
-                                                                    </li>
-                                                                    <li class="nav-item"><a href="#" class="nav-link"><i
-                                                                                class="fas fa-expand"></i></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </nav>
-                                                        </div>
-                                                        <div class="part2">
-                                                            <h3 class="product-title">Here Product Title</h3>
-                                                            <h4 class="product-price">PHP 399</h4>
-                                                        </div>
-                                                    </div>
+                                                <div class="part2">
+                                                    <h3 class="product-title">Here Product Title</h3>
+                                                    <h4 class="product-price">PHP 399</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Single Product -->
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div id="product3" class="single-product">
+                                                <div class="part1 position-relative mb-1">
+                                                    <div class="product-image"></div>
+                                                    <nav class="navbar navbar-expand-sm">
+                                                        <ul class="navbar-nav flex-row">
+                                                            <li class="nav-item"><i class="fas fa-shopping-cart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToCart"></i></li>
+                                                            <li class="nav-item"><i class="fas fa-heart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToFavorites"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-plus"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToWishlist"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-expand"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#expand3"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                                <div class="part2">
+                                                    <h3 class="product-title">Here Product Title</h3>
+                                                    <h4 class="product-old-price">PHP 599</h4>
+                                                    <h4 class="product-price">PHP 399</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Single Product -->
+                                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                                            <div id="product4" class="single-product">
+                                                <div class="part1 position-relative mb-1">
+                                                    <div class="product-image"></div>
+                                                    <span class="new">new</span>
+                                                    <nav class="navbar navbar-expand-sm">
+                                                        <ul class="navbar-nav flex-row">
+                                                            <li class="nav-item"><i class="fas fa-shopping-cart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToCart"></i></li>
+                                                            <li class="nav-item"><i class="fas fa-heart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToFavorites"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-plus"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToWishlist"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-expand"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#expand4"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                                <div class="part2">
+                                                    <h3 class="product-title">Here Product Title</h3>
+                                                    <h4 class="product-price">PHP 399</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Single Product -->
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div id="product1" class="single-product">
+                                                <div class="part1 position-relative mb-1">
+                                                    <div class="product-image"></div>
+                                                    <nav class="navbar navbar-expand-sm">
+                                                        <ul class="navbar-nav flex-row">
+                                                            <li class="nav-item"><i class="fas fa-shopping-cart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToCart"></i></li>
+                                                            <li class="nav-item"><i class="fas fa-heart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToFavorites"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-plus"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToWishlist"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-expand"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#expand1"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                                <div class="part2">
+                                                    <h3 class="product-title">Here Product Title</h3>
+                                                    <h4 class="product-old-price">PHP 599</h4>
+                                                    <h4 class="product-price">PHP 399</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Single Product -->
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div id="product2" class="single-product">
+                                                <div class="part1 position-relative mb-1">
+                                                    <div class="product-image"></div>
+                                                    <span class="discount">15% off</span>
+                                                    <nav class="navbar navbar-expand-sm">
+                                                        <ul class="navbar-nav flex-row">
+                                                            <li class="nav-item"><i class="fas fa-shopping-cart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToCart"></i></li>
+                                                            <li class="nav-item"><i class="fas fa-heart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToFavorites"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-plus"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToWishlist"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-expand"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#expand2"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                                <div class="part2">
+                                                    <h3 class="product-title">Here Product Title</h3>
+                                                    <h4 class="product-price">PHP 399</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Single Product -->
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div id="product3" class="single-product">
+                                                <div class="part1 position-relative mb-1">
+                                                    <div class="product-image"></div>
+                                                    <nav class="navbar navbar-expand-sm">
+                                                        <ul class="navbar-nav flex-row">
+                                                            <li class="nav-item"><i class="fas fa-shopping-cart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToCart"></i></li>
+                                                            <li class="nav-item"><i class="fas fa-heart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToFavorites"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-plus"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToWishlist"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-expand"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#expand3"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                                <div class="part2">
+                                                    <h3 class="product-title">Here Product Title</h3>
+                                                    <h4 class="product-old-price">PHP 599</h4>
+                                                    <h4 class="product-price">PHP 399</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Single Product -->
+                                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                                            <div id="product4" class="single-product">
+                                                <div class="part1 position-relative mb-1">
+                                                    <div class="product-image"></div>
+                                                    <span class="new">new</span>
+                                                    <nav class="navbar navbar-expand-sm">
+                                                        <ul class="navbar-nav flex-row">
+                                                            <li class="nav-item"><i class="fas fa-shopping-cart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToCart"></i></li>
+                                                            <li class="nav-item"><i class="fas fa-heart"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToFavorites"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-plus"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addToWishlist"></i>
+                                                            </li>
+                                                            <li class="nav-item"><i class="fas fa-expand"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#expand4"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                                <div class="part2">
+                                                    <h3 class="product-title">Here Product Title</h3>
+                                                    <h4 class="product-price">PHP 399</h4>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                             </section>
 
                         </div>
@@ -768,11 +957,23 @@
                 </div>
             </div>
             <div id="expand1" class="modal">
-                <div class="modal-dialog">
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <img src="assets/img/product/men-tshirt1.jpg" alt="" class="img-fluid">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
+                <div class="modal-dialog modal-dialog-centered">
+                    <img src="assets/img/product/men-tshirt1.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div id="expand2" class="modal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <img src="assets/img/product/men-tshirt2.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div id="expand3" class="modal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <img src="assets/img/product/men-tshirt3.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div id="expand4" class="modal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <img src="assets/img/product/men-tshirt4.jpg" alt="" class="img-fluid">
                 </div>
             </div>
 
