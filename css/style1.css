@@ -3,9 +3,11 @@ body {
   font-family: "Montserrat", Arial, sans-serif;
 }
 
-.background {
-  background: url(../assets/img/wallpaper.png) no-repeat center;
-  background-size: cover;
+.line-break {
+  width: 25px;
+  height: 3px;
+  border-radius: 25%;
+  background-color: black;
 }
 
 .text-hotpink {
@@ -15,22 +17,27 @@ body {
 .shape {
   position: absolute;
   height: 100%;
-  width: 800px;
+  width: 700px;
   bottom: 0;
   border-radius: 10% 150% 150% 20% / 10% 150% 150% 20%;
   box-shadow: 0 0 20px #000000;
-  animation: shape 5s ease-in-out infinite;
   z-index: 1;
 }
 
 .shape-left {
-  left: -9%;
-  background: linear-gradient(45deg, red 0%, hotpink 100%);
+  left: -2%;
+  background: linear-gradient(
+    45deg,
+    rgb(255, 0, 0) 0%,
+    rgba(255, 105, 180, 0.808) 100%
+  );
+  animation: shape-left 5s ease-in-out infinite;
 }
 
 .shape-right {
-  right: -9%;
-  background: linear-gradient(0deg, red 0%, hotpink 100%);
+  right: -2%;
+  background: linear-gradient(0deg, red 0%, rgba(255, 105, 180, 0.836) 100%);
+  animation: shape-right 5s ease-in-out infinite;
   transform: rotateY(180deg) !important;
 }
 
@@ -44,13 +51,28 @@ body {
   z-index: 2;
 }
 
-@keyframes shape {
+@keyframes shape-left {
+  0% {
+    border-radius: 10% 100% 200% 20% / 10% 150% 200% 20%;
+    background-size: 100% 100%;
+  }
+  50% {
+    border-radius: 10% 170% 120% 20% / 10% 140% 230% 20%;
+    background-size: 150% 300%;
+  }
+  100% {
+    border-radius: 10% 100% 200% 20% / 10% 150% 200% 20%;
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes shape-right {
   0% {
     border-radius: 10% 170% 120% 20% / 10% 140% 230% 20%;
     background-size: 100% 100%;
   }
   50% {
-    border-radius: 10% 100% 200% 20% / 10% 150% 200% 20%;
+    border-radius: 30% 120% 220% 40% / 20% 170% 220% 50%;
     background-size: 150% 300%;
   }
   100% {
@@ -59,11 +81,7 @@ body {
   }
 }
 
-.form {
-  height: 80vh;
-}
-
-#addToCartOffcanvas {
+#addToCartOffcanvas, #addToWishlistOffcanvas {
   width: 800px;
 }
 
@@ -460,7 +478,6 @@ input[type="search"]:focus,
   #card-image {
     height: 70vh;
   }
-  
 }
 
 @media (min-width: 1024px) {
@@ -475,7 +492,7 @@ input[type="search"]:focus,
   }
 }
 @media (max-width: 768px) {
-  .social-links i{
+  .social-links i {
     color: black !important;
   }
   .section-product .single-product .part1 nav {
