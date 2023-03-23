@@ -3,6 +3,70 @@ body {
   font-family: "Montserrat", Arial, sans-serif;
 }
 
+.background {
+  background: url(../assets/img/wallpaper.png) no-repeat center;
+  background-size: cover;
+}
+
+.text-hotpink {
+  color: hotpink;
+}
+
+.shape {
+  position: absolute;
+  height: 100%;
+  width: 800px;
+  bottom: 0;
+  border-radius: 10% 150% 150% 20% / 10% 150% 150% 20%;
+  box-shadow: 0 0 20px #000000;
+  animation: shape 5s ease-in-out infinite;
+  z-index: 1;
+}
+
+.shape-left {
+  left: -9%;
+  background: linear-gradient(45deg, red 0%, hotpink 100%);
+}
+
+.shape-right {
+  right: -9%;
+  background: linear-gradient(0deg, red 0%, hotpink 100%);
+  transform: rotateY(180deg) !important;
+}
+
+.top-menu {
+  z-index: 3;
+  position: relative;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes shape {
+  0% {
+    border-radius: 10% 170% 120% 20% / 10% 140% 230% 20%;
+    background-size: 100% 100%;
+  }
+  50% {
+    border-radius: 10% 100% 200% 20% / 10% 150% 200% 20%;
+    background-size: 150% 300%;
+  }
+  100% {
+    border-radius: 10% 170% 120% 20% / 10% 140% 230% 20%;
+    background-size: 100% 100%;
+  }
+}
+
+.form {
+  height: 80vh;
+}
+
+#addToCartOffcanvas {
+  width: 800px;
+}
+
 .double-image {
   position: relative;
   min-height: 440px;
@@ -27,36 +91,9 @@ body {
   left: -400px;
   z-index: 1;
 }
-.banner, .double-image div {
+.banner,
+.double-image div {
   box-shadow: -10px 10px 20px 5px rgba(0, 0, 0, 0.308);
-}
-
-@media (max-width: 1440px) {
-  .double-image div:first-child {
-    width: 270px;
-    top: 17px;
-  }
-  .double-image div:last-child {
-    width: 400px;
-    top: 80px;
-    left: -300px;
-    z-index: 1;
-  }
-}
-@media (max-width: 1024px) {
-  .double-image div:first-child {
-    width: 188px;
-    top: 17px;
-  }
-  .double-image div:last-child {
-    width: 267px;
-    top: 80px;
-    left: -220px;
-    z-index: 1;
-  }
-  .banner {
-    top: 11px;
-  }
 }
 
 .sale {
@@ -128,12 +165,24 @@ body {
   border-color: none;
 }
 
-.link-hover-hotpink {
+.link-hover-hotpink,
+.link-hover-light,
+.link-hover-dark {
   transition: all 0.4s ease-in-out;
 }
 
 .link-hover-hotpink:hover {
   color: hotpink !important;
+  transform: translateY(-4px);
+}
+
+.link-hover-light:hover {
+  color: white !important;
+  transform: translateY(-4px);
+}
+
+.link-hover-dark:hover {
+  color: #000000 !important;
   transform: translateY(-4px);
 }
 
@@ -183,7 +232,7 @@ div.hover-effect {
 }
 
 .important {
-  color: hotpink;
+  color: white;
 }
 
 .shop-now {
@@ -411,6 +460,7 @@ input[type="search"]:focus,
   #card-image {
     height: 70vh;
   }
+  
 }
 
 @media (min-width: 1024px) {
@@ -426,6 +476,9 @@ input[type="search"]:focus,
 }
 
 @media (max-width: 768px) {
+  .social-links i{
+    color: black !important;
+  }
   .section-product .single-product .part1 nav {
     top: 350px;
     opacity: 1;
@@ -442,5 +495,47 @@ input[type="search"]:focus,
   }
   .double-image {
     display: none;
+  }
+}
+
+@media (max-width: 1440px) {
+  .double-image div:first-child {
+    width: 270px;
+    top: 17px;
+  }
+  .double-image div:last-child {
+    width: 400px;
+    top: 80px;
+    left: -300px;
+    z-index: 1;
+  }
+  .shape {
+    width: 600px;
+  }
+}
+@media (max-width: 1024px) {
+  .double-image div:first-child {
+    width: 188px;
+    top: 17px;
+  }
+  .double-image div:last-child {
+    width: 267px;
+    top: 80px;
+    left: -220px;
+    z-index: 1;
+  }
+  .shape {
+    width: 500px;
+  }
+  .banner {
+    top: 11px;
+  }
+}
+@media (max-width: 768px) {
+  .shape {
+    display: none;
+  }
+  .important {
+    color: hotpink;
   }
 }
