@@ -474,7 +474,6 @@ input[type="search"]:focus,
     overflow-x: auto;
   }
 }
-
 @media (max-width: 768px) {
   .social-links i{
     color: black !important;
