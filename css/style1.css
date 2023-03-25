@@ -82,7 +82,8 @@ body {
   }
 }
 
-#addToCartOffcanvas, #addToWishlistOffcanvas {
+#addToCartOffcanvas,
+#addToWishlistOffcanvas {
   width: 800px;
 }
 
@@ -406,6 +407,38 @@ input[type="search"]:focus,
   width: 100%;
   height: 100%;
   background: url(../assets/img/product/men-tshirt4.jpg) no-repeat center;
+  background-size: cover;
+  transition: all 0.5s ease;
+}
+
+.section-product #product5 .product-image {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/img/product/women-shirt1.jpg) no-repeat center;
+  background-size: cover;
+  transition: all 0.5s ease;
+}
+
+.section-product #product6 .product-image {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/img/product/women-shirt2.jpg) no-repeat center;
+  background-size: cover;
+  transition: all 0.5s ease;
+}
+
+.section-product #product7 .product-image {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/img/product/women-shirt3.jpg) no-repeat center;
+  background-size: cover;
+  transition: all 0.5s ease;
+}
+
+.section-product #product8 .product-image {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/img/product/women-shirt4.jpg) no-repeat center;
   background-size: cover;
   transition: all 0.5s ease;
 }
