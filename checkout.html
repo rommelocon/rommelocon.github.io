@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Metro</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/fd5c9838ec.js" crossorigin="anonymous"></script>
+    <style>
+        .order .card {
+            position: relative;
+            background: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, .1)
+        }
+
+        .ribbon {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            position: absolute
+        }
+
+        .ribbon::before,
+        .ribbon::after {
+            position: absolute;
+            content: '';
+            display: block;
+            border: 5px solid red
+        }
+
+        .ribbon span {
+            position: absolute;
+            display: block;
+            width: 225px;
+            padding: 15px 0;
+            background-color: red;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+            color: #fff;
+            font: 700 18px/1 'Lato', sans-serif;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+            text-transform: uppercase;
+            text-align: center
+        }
+
+        .ribbon-top-right {
+            top: -12px;
+            right: -12px
+        }
+
+        .ribbon-top-right::before,
+        .ribbon-top-right::after {
+            border-top-color: transparent;
+            border-right-color: transparent
+        }
+
+        .ribbon-top-right::before {
+            top: 0;
+            left: 0
+        }
+
+        .ribbon-top-right::after {
+            bottom: 0;
+            right: 0
+        }
+
+        .ribbon-top-right span {
+            left: -25px;
+            top: 30px;
+            transform: rotate(45deg)
+        }
+
+        small {
+            font-size: 12px
+        }
+
+        .cart {
+            line-height: 1
+        }
+
+        .icon {
+            background-color: #eee;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%
+        }
+
+        .pic {
+            width: 70px;
+            height: 90px;
+            border-radius: 5px
+        }
+
+        td {
+            vertical-align: middle
+        }
+
+        .red {
+            color: #fd1c1c;
+            font-weight: 600
+        }
+
+        .b-bottom {
+            border-bottom: 2px dotted black;
+            padding-bottom: 20px
+        }
+
+        p {
+            margin: 0px
+        }
+
+        table input {
+            width: 40px;
+            border: 1px solid #eee
+        }
+
+        input:focus {
+            border: 1px solid #eee;
+            outline: none
+        }
+
+        .round {
+            background-color: #eee;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .payment-summary .unregistered {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #eee;
+            text-transform: uppercase;
+            font-size: 14px
+        }
+
+        .payment-summary input {
+            width: 100%;
+            margin-right: 20px
+        }
+
+        .payment-summary .sale {
+            width: 100%;
+            background-color: #e9b3b3;
+            text-transform: uppercase;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5PX 0
+        }
+
+        .red {
+            color: #fd1c1c
+        }
+
+        .del {
+            width: 35px;
+            height: 35px;
+            object-fit: cover
+        }
+
+        .delivery .card {
+            padding: 10px 5px
+        }
+
+        .option {
+            position: relative;
+            top: 50%;
+            display: block;
+            cursor: pointer;
+            color: #888
+        }
+
+        .option input {
+            display: none
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 40%;
+            left: -25px;
+            height: 20px;
+            width: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 50%
+        }
+
+        .option input:checked~.checkmark:after {
+            display: block
+        }
+
+        .option .checkmark:after {
+            content: "\2713";
+            width: 10px;
+            height: 10px;
+            display: block;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: 200ms ease-in-out 0s
+        }
+
+        .option:hover input[type="radio"]~.checkmark {
+            background-color: #f4f4f4
+        }
+
+        .option input[type="radio"]:checked~.checkmark {
+            background: #ac1f32;
+            color: #fff;
+            transition: 300ms ease-in-out 0s
+        }
+
+        .option input[type="radio"]:checked~.checkmark:after {
+            transform: translate(-50%, -50%) scale(1);
+            color: #fff
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!--Navigation-->
+        <div class="top-menu container-fluid m-0 p-0">
+            <nav class="navbar navbar-expand-xl navbar-light position-relative align-items-center navbar-dark bg-dark"
+                data-aos="fade-down">
+                <div class="container">
+                    <!-- Branding Logo-->
+                    <a href="#" class="navbar-brand m-0 p-0 me-4 p-2"><img src="assets/img/logo-white.png" alt=""
+                            width="80px" class="img-fluid"></a>
+                    <!-- Close Navbar-toggle -->
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarDark" aria-controls="navbarDark" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <!-- Menu Navigation-->
+                    <div class="collapse navbar-collapse" id="navbarDark">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link active"><i class="fas fa-house"></i>
+                                    Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="product.html" class="nav-link"><i class="fa-solid fa-shop"></i>
+                                    Shop</a>
+                            </li>
+
+                            <!--Dropdown Menu-->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false"><i class="fa-solid fa-folder"></i>
+                                    Men's
+                                </a>
+                                <ul class="dropdown-menu vw-100 text-center p-5 start-0">
+                                    <li>
+                                        <div class="dropdown-item-text fs-2 text-uppercase fw-bold dropdown-effect">
+                                            Men's Collection
+                                        </div>
+                                    </li>
+                                    <li><a href="men.html" class="btn btn-outline-dark btn-sm">View All</a></li>
+                                    <li>
+                                        <div class="d-flex m-4">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <img src="assets/img/product/men-tshirt1.jpg" alt=""
+                                                        class="img-fluid">
+                                                </div>
+                                                <div class="col-3">
+                                                    <img src="assets/img/product/men-tshirt2.jpg" alt=""
+                                                        class="img-fluid">
+                                                </div>
+                                                <div class="col-3">
+                                                    <img src="assets/img/product/men-tshirt3.jpg" alt=""
+                                                        class="img-fluid">
+                                                </div>
+                                                <div class="col-3">
+                                                    <img src="assets/img/product/men-tshirt4.jpg" alt=""
+                                                        class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false"><i class="fa-solid fa-folder"></i>
+                                    Women's
+                                </a>
+                                <ul class="dropdown-menu vw-100 text-center p-5 start-0">
+                                    <li>
+                                        <div class="dropdown-item-text fs-2 text-uppercase fw-bold">Women's
+                                            Collection
+                                        </div>
+                                    </li>
+                                    <li><a href="women.html" class="btn btn-outline-dark btn-sm">View All</a></li>
+                                    <li>
+                                        <div class="d-flex m-4">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <img src="assets/img/product/women-shirt1.jpg" alt=""
+                                                        class="img-fluid">
+                                                </div>
+                                                <div class="col-3">
+                                                    <img src="assets/img/product/women-shirt2.jpg" alt=""
+                                                        class="img-fluid">
+                                                </div>
+                                                <div class="col-3">
+                                                    <img src="assets/img/product/women-shirt3.jpg" alt=""
+                                                        class="img-fluid">
+                                                </div>
+                                                <div class="col-3">
+                                                    <img src="assets/img/product/women-shirt4.jpg" alt=""
+                                                        class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+
+                        <div class="navbar-btn align-items-center">
+                            <!--Search button icon-->
+                            <a class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch"
+                                aria-controls="offcanvasSearch">
+                                <i class="fa-solid fa-magnifying-glass link-hover-hotpink"></i>
+                            </a>
+
+                            <!--Login and Signup-->
+                            <a href="login.html" class="btn">
+                                <i class="fa-solid fa-user link-hover-hotpink"></i>
+                            </a>
+
+
+                            <!--Wishlist button icon-->
+                            <a href=" #" class="btn" data-bs-toggle="offcanvas"
+                                data-bs-target="#addToWishlistOffcanvas">
+                                <i class="fa-solid fa-heart link-hover-hotpink"></i>
+                            </a>
+
+
+
+                            <!--Cart Button-->
+                            <a href="#" class="btn" data-bs-toggle="offcanvas" data-bs-target="#addToCartOffcanvas">
+                                <i class="fa-solid fa-shopping-cart link-hover-hotpink"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content-->
+        <div class="main">
+            <div class="container mt-4 p-0">
+                <div class="row px-md-4 px-2 pt-4 mb-5">
+                    <div class="col-lg-8">
+                        <p class="pb-2 fw-bold">Order</p>
+                        <div class="card">
+                            <div class="ribbon ribbon-top-right"><span>SALE TIME!</span></div>
+                            <div>
+                                <div class="table-responsive px-md-4 px-2 pt-3">
+                                    <table class="table table-borderless">
+                                        <tbody>
+                                            <tr class="border-bottom">
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div> <img class="pic"
+                                                                src="assets/img/product/men-tshirt7.jpg"
+                                                                alt=""> </div>
+                                                        <div class="ps-3 d-flex flex-column justify-content">
+                                                            <p class="fw-bold">Metro<span class="ps-1">Graphic</span><span
+                                                                    class="ps-1">Tee</span></p> <small
+                                                                class=" d-flex"> <span class=" text-muted">Color:</span>
+                                                                <span class=" fw-bold">White</span> </small> <small
+                                                                class=""> <span class=" text-muted">Size:</span> <span
+                                                                    class=" fw-bold">L</span> </small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <p class="pe-3"><span class="red">₱399.00</span></p>
+                                                        <p class="text-muted text-decoration-line-through">₱599.00</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center"> <span
+                                                            class="pe-3 text-muted">Quantity</span> <span class="pe-3">
+                                                            <input class="ps-2" type="number" value="2"></span>
+                                                        <div class="round"> <span class=""> L </span> </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-bottom">
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div> <img class="pic"
+                                                                src="assets/img/product/women-shirt6.jpg"
+                                                                alt=""> </div>
+                                                        <div class="ps-3 d-flex flex-column">
+                                                            <p class="fw-bold">Metro<span class="ps-1">Anime</span>
+                                                            Tee</p> <small class=" d-flex"> <span
+                                                                    class=" text-muted">Color:</span> <span
+                                                                    class="fw-bold">White</span> </small> <small
+                                                                class=""> <span class=" text-muted">Size:</span> <span
+                                                                    class="fw-bold">L</span> </small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <p class="pe-3"><span class="red">₱399.00</span></p>
+                                                        <p class="text-muted text-decoration-line-through">₱599.00</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center"> <span
+                                                            class="pe-3 text-muted">Quantity</span> <span class="pe-3">
+                                                            <input class="ps-2" type="number" value="2"></span>
+                                                        <div class="round"> <span class=""> L </span> </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="">
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div> <img class="pic"
+                                                                src="assets/img/product/men-tshirt6.jpg"
+                                                                alt=""> </div>
+                                                        <div class="ps-3 d-flex flex-column">
+                                                            <p class="fw-bold"> Metro<span
+                                                                    class="ps-1">White</span><span
+                                                                    class="ps-1">Tee</span></p> <small class="">
+                                                                <span class=" text-muted">Color:</span> <span
+                                                                    class="fw-bold">White</span> </small> <small
+                                                                class=""> <span class=" text-muted">Size:</span> <span
+                                                                    class="fw-bold">L</span> </small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <p class="pe-3"><span class="red">₱399.00</span></p>
+                                                        <p class="text-muted text-decoration-line-through">₱599.00</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center"> <span
+                                                            class="pe-3 text-muted">Quantity</span> <span class="pe-3">
+                                                            <input class="ps-2" type="number" value="2"></span>
+                                                        <div class="round"> <span class=""> L </span> </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 payment-summary">
+                        <p class="fw-bold pt-lg-0 pt-4 pb-2">Payment Summary</p>
+                        <div class="card px-md-3 px-2 pt-4">
+                            <div class="unregistered mb-4"> <span class="py-1">unregistered account</span> </div>
+                            <div class="d-flex justify-content-between pb-3"> <small class="text-muted">Transaction
+                                    code</small>
+                                <p class="">VC115665</p>
+                            </div>
+                            <div class="d-flex justify-content-between b-bottom"> <input type="text" class="ps-2"
+                                    placeholder="COUPON CODE">
+                                <div class="btn btn-primary">Apply</div>
+                            </div>
+                            <div class="d-flex flex-column b-bottom">
+                                <div class="d-flex justify-content-between py-3"> <small class="text-muted">Order
+                                        Summary</small>
+                                    <p>₱2394</p>
+                                </div>
+                                <div class="d-flex justify-content-between pb-3"> <small class="text-muted">Additional
+                                        Service</small>
+                                    <p>₱50</p>
+                                </div>
+                                <div class="d-flex justify-content-between"> <small class="text-muted">Total
+                                        Amount</small>
+                                    <p>₱2444</p>
+                                </div>
+                            </div>
+                            <div class="sale my-3"> <span>sale<span
+                                        class="px-1">expiring</span><span>in</span>:</span><span class="red">21<span
+                                        class="ps-1">hours</span>,31<span class="ps-1 ">minutes</span></span> </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 delivery px-md-3 px-1">
+                        <p class="pt-4 fw-bold pb-3 ps-2">Delivery</p>
+                        <div class="d-md-flex justify-content-between align-items-center pb-4">
+                            <div class="size d-flex ps-4"> <label class="option d-flex align-items-center"> <input
+                                        type="radio" name="radio">
+                                    <div class="card">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center justify-content-center"> <img
+                                                    class="del"
+                                                    src="https://www.freepnglogos.com/uploads/ups-logo-transparent/ups-airlines-aviation-22.png"
+                                                    alt="">
+                                                <p class="ps-2">DPD</p>
+                                            </div>
+                                            <div class=" d-flex flex-column px-3">
+                                                <p class="fw-bold pb-1">DPD<span>Deliveries</span></p> <small
+                                                    class="text-muted pb-1">Expected<span
+                                                        class="ps-1">delivery:</span></small> <small
+                                                    class="text-muted pb-1">Friday:28</small>
+                                            </div>
+                                            <p class="fw-bold">₱50</p>
+                                        </div>
+                                    </div> <span class="checkmark"></span>
+                                </label> </div>
+                            <div class="size d-flex pt-md-0 pt-3 ps-md-0 ps-4"> <label
+                                    class="option d-flex align-items-center"> <input type="radio" name="radio">
+                                    <div class="card">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center justify-content-center"> <img
+                                                    class="del"
+                                                    src="https://www.freepnglogos.com/uploads/ups-logo-transparent/ups-airlines-aviation-22.png"
+                                                    alt="">
+                                                <p class="ps-2">DPD</p>
+                                            </div>
+                                            <div class=" d-flex flex-column px-3">
+                                                <p class="fw-bold pb-1">DPD<span>Deliveries</span></p> <small
+                                                    class="text-muted pb-1">Expected<span
+                                                        class="ps-1">delivery:</span></small> <small
+                                                    class="text-muted pb-1">Friday:28</small>
+                                            </div>
+                                            <p class="fw-bold">₱75</p>
+                                        </div>
+                                    </div> <span class="checkmark"></span>
+                                </label> </div>
+                        </div>
+                        <div class="d-md-flex justify-content-between align-items-center pb-4">
+                            <div class="size d-flex ps-4"> <label class="option d-flex align-items-center"> <input
+                                        type="radio" name="radio">
+                                    <div class="card">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center justify-content-center"> <img
+                                                    class="del"
+                                                    src="https://www.freepnglogos.com/uploads/ups-logo-transparent/ups-airlines-aviation-22.png"
+                                                    alt="">
+                                                <p class="ps-2">DPD</p>
+                                            </div>
+                                            <div class=" d-flex flex-column px-3">
+                                                <p class="fw-bold pb-1">DPD<span>Deliveries</span></p> <small
+                                                    class="text-muted pb-1">Expected<span
+                                                        class="ps-1">delivery:</span></small> <small
+                                                    class="text-muted pb-1">Friday:28</small>
+                                            </div>
+                                            <p class="fw-bold">₱100</p>
+                                        </div>
+                                    </div> <span class="checkmark"></span>
+                                </label> </div>
+                            <div class="size d-flex pt-md-0 pt-3 ps-md-0 ps-4"> <label
+                                    class="option d-flex align-items-center"> <input type="radio" name="radio">
+                                    <div class="card">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center justify-content-center"> <img
+                                                    class="del"
+                                                    src="https://www.freepnglogos.com/uploads/ups-logo-transparent/ups-airlines-aviation-22.png"
+                                                    alt="">
+                                                <p class="ps-2">DPD</p>
+                                            </div>
+                                            <div class=" d-flex flex-column px-3">
+                                                <p class="fw-bold pb-1">DPD<span>Deliveries</span></p> <small
+                                                    class="text-muted pb-1">Expected<span
+                                                        class="ps-1">delivery:</span></small> <small
+                                                    class="text-muted pb-1">Friday:28</small>
+                                            </div>
+                                            <p class="fw-bold">₱150</p>
+                                        </div>
+                                    </div> <span class="checkmark"></span>
+                                </label> </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <p class="pt-4 fw-bold pb-3">Additional Service</p>
+                        <div class="card p-3 mb-2">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <p class="fw-bold">Care + package</p> <small class="text-muted">One year of
+                                        additional Care</small>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="pe-3">₱500.00</p>
+                                    <div class="form-check form-switch"> <input class="form-check-input" type="checkbox"
+                                            id="SwitchCheck"> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card p-3 mb-2">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <p class="fw-bold">Environment Friendly</p> <small class="text-muted">Add some tip
+                                        for earth care</small>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="pe-3">₱100.00</p>
+                                    <div class="form-check form-switch"> <input class="form-check-input" type="checkbox"
+                                            id="SwitchCheck"> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card p-3 mb-2">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <p class="fw-bold">Golden Guard</p> <small class="text-muted">30 days more for
+                                        return</small>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="pe-3">₱250.00</p>
+                                    <div class="form-check form-switch"> <input class="form-check-input" type="checkbox"
+                                            id="SwitchCheck"> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="btn btn-primary float-end" role="button" data-bs-toggle="modal" data-bs-target="#orderPlace">Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--Footer-->
+        <div class="footer">
+            <div class="container-fluid text-white bg-dark">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 mt-5 d-flex flex-column">
+                            <div class="logo"><img src="assets/img/logo-white.png" alt="" width="200px"></div>
+                            <div class="socialmedia">
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-twitter"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                                <a href=""><i class="bi bi-tiktok"></i></a>
+                                <a href=""><i class="bi bi-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="d-inline-flex flex-column mt-5">
+                                <h5 class="text-uppercase fw-bold">Explore</h5>
+                                <ul class="footer-nav">
+                                    <li class="footer-item"><a href="about-us.html" class="footer-link">About Us</a>
+                                    </li>
+                                    <li class="footer-item"><a href="faq.html" class="footer-link">FAQs</a></li>
+                                    <li class="footer-item"><a href="privacypolicy.html" class="footer-link">Privacy
+                                            Policy</a></li>
+                                    <li class="footer-item"><a href="termsandcondition.html" class="footer-link">Terms
+                                            and Conditions</a>
+                                    </li>
+                                    <li class="footer-item"><a href="refundpolicy.html" class="footer-link">Refund
+                                            policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="d-inline-flex flex-column mt-5">
+                                <h5 class="text-uppercase fw-bold">Connect</h5>
+                                <ul class="footer-nav">
+                                    <li class="footer-item"><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                                <p class="mt-3">
+                                    Don Antonio Heights, Commonwealth,
+                                    <br>
+                                    Quezon City, 1126,
+                                    <br>
+                                    Philippines
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer text-center p-5">© 2023 Metro</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal & Alert -->
+        <div>
+            <div class="offcanvas offcanvas-end" id="addToCartOffcanvas">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Shopping Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Remove</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="align-middle">
+                                    <td class="col-6">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div>
+                                                <img src="assets/img/product/hero1.png" alt="" width="70px">
+                                            </div>
+                                            <div class="text-truncate">
+                                                <h5 class="fw-bold text-uppercase">Metro White Tee</h5>
+                                                <p class="fw-light m-0 fst-italic">Metro's Collection</p>
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                    <td class="col-2">
+                                        <div class="fw-bold">₱399</div>
+                                    </td>
+                                    <td class="col-2">
+                                        <div class=""><input type="number" class="form-control"></div>
+                                    </td>
+                                    <td class="col-2"><i class="fas fa-trash"></i></td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td class="col-6">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div>
+                                                <img src="assets/img/product/hero2.png" alt="" width="70px">
+                                            </div>
+                                            <div class="text-truncate">
+                                                <h5 class="fw-bold text-uppercase">take it easy on yourself</h5>
+                                                <p class="fw-light m-0 fst-italic">Metro's Collection</p>
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                    <td class="col-2">
+                                        <div class="fw-bold">₱399</div>
+                                    </td>
+                                    <td class="col-2">
+                                        <div class=""><input type="number" class="form-control"></div>
+                                    </td>
+                                    <td class="col-2"><i class="fas fa-trash"></i></td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td class="col-6">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div>
+                                                <img src="assets/img/product/hero3.png" alt="" width="70px">
+                                            </div>
+                                            <div class="text-truncate">
+                                                <h5 class="fw-bold text-uppercase">Graphic Tree Frame Tee</h5>
+                                                <p class="fw-light m-0 fst-italic">Metro's Collection</p>
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                    <td class="col-2">
+                                        <div class="fw-bold">₱399</div>
+                                    </td>
+                                    <td class="col-2">
+                                        <div class=""><input type="number" class="form-control"></div>
+                                    </td>
+                                    <td class="col-2"><i class="fas fa-trash"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="d-flex justify-content-between">
+                            <div><a href="#" role="button" class="btn btn-link" data-bs-dismiss="offcanvas"><i
+                                        class="fas fa-arrow-left"></i> Continue Shopping</a></div>
+                            <div class="d-flex flex-column justify-content-center align-items-center text-center">
+                                <h5>Subtotal:</h5>
+                                <h5>₱399</h5>
+                                <a href="#" role="button" class="btn btn-primary px-4">Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-end" id="addToWishlistOffcanvas">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Wishlist</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Remove</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="align-middle">
+                                    <td class="col-6">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div>
+                                                <img src="assets/img/product/hero1.png" alt="" width="70px">
+                                            </div>
+                                            <div class="text-truncate">
+                                                <h5 class="fw-bold text-uppercase">Metro White Tee</h5>
+                                                <p class="fw-light m-0 fst-italic">Metro's Collection</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="col-2"><i class="fas fa-trash"></i></td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td class="col-6">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div>
+                                                <img src="assets/img/product/hero2.png" alt="" width="70px">
+                                            </div>
+                                            <div class="text-truncate">
+                                                <h5 class="fw-bold text-uppercase">take it easy on yourself</h5>
+                                                <p class="fw-light m-0 fst-italic">Metro's Collection</p>
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                    <td class="col-2"><i class="fas fa-trash"></i></td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td class="col-6">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div>
+                                                <img src="assets/img/product/hero3.png" alt="" width="70px">
+                                            </div>
+                                            <div class="text-truncate">
+                                                <h5 class="fw-bold text-uppercase">Graphic Tree Frame Tee</h5>
+                                                <p class="fw-light m-0 fst-italic">Metro's Collection</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="col-2"><i class="fas fa-trash"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="d-flex justify-content-between">
+                            <div><a href="#" role="button" class="btn btn-link" data-bs-dismiss="offcanvas"><i
+                                        class="fas fa-arrow-left"></i> Continue Shopping</a></div>
+                            <div class="d-flex flex-column justify-content-center align-items-center text-center">
+                                <a href="#" role="button" class="btn btn-primary px-4">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="d-flex">
+                <!--Dropdown offcanvas when search button click-->
+                <div class="offcanvas offcanvas-top bg-dark text-white text-center" tabindex="-1" id="offcanvasSearch"
+                    aria-labelledby="offcanvasSearchLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title"></h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <form class="container input-group-lg input-group d-flex">
+                            <span class="input-group-text" id="basic-addon1">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                            <input type="search" class="form-control form-control-lg" placeholder="Search our store"
+                                aria-label="Search" aria-describedby="basic-addon1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Place-->
+            <div class="modal" id="orderPlace">
+                <div class="modal-dialog">
+                    <div class="alert alert-success alert-dismissible">Your order has been placed. Thank you for buying Metro product!</div>
+                </div>
+            </div>
+
+            
+            <script>
+                AOS.init();
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
