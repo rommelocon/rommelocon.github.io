@@ -4,11 +4,20 @@ body {
   font-size: 14px;
 }
 
+.login-wrapper .img-wrapper {
+  background: url(../assets/img/product/men-tshirt6.jpg) no-repeat center;
+  background-size: cover;
+}
+
 .line-break {
   width: 25px;
   height: 3px;
   border-radius: 25%;
   background-color: black;
+}
+
+.offcanvas {
+  z-index: 999999 !important;
 }
 
 .text-hotpink {
