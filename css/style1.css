@@ -5,6 +5,7 @@ body {
 }
 
 .hide-scroll {
+  height: 779px;
   overflow-y: scroll;
 }
 
@@ -648,5 +649,11 @@ input[type="search"]:focus,
   }
   .important {
     color: hotpink;
+  }
+}
+
+@media (max-width: 320px) {
+  .login-wrapper .img-wrapper {
+    display: none;
   }
 }
